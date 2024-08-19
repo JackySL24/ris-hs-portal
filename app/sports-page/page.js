@@ -15,6 +15,8 @@ import "../css/main.css"
 import "../css/sportspage.css"
 import "../css/custom-swiper.css"
 import "../css/custom-dropdown.css"
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 export default function SportsPage() {
     const score_title = ['football', 'badminton', 'soccer']
@@ -233,17 +235,17 @@ export default function SportsPage() {
                                     <ul className="dropdown-menu">
                                         <li>
                                             <a className="dropdown-item" href="#">
-                                                Action
+                                                SEASON 1
                                             </a>
                                         </li>
                                         <li>
                                             <a className="dropdown-item" href="#">
-                                                Another action
+                                                SEASON 2
                                             </a>
                                         </li>
                                         <li>
                                             <a className="dropdown-item" href="#">
-                                                Something else here
+                                                SEASON 3
                                             </a>
                                         </li>
                                     </ul>
