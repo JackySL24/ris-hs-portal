@@ -163,11 +163,12 @@ a {
     background-color: transparent;
 }
 
-.dda{
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-
 .dda-margintop{
     margin-top: -18px;
+}
+
+.banner-video {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }

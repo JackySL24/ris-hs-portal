@@ -17,9 +17,11 @@ import "../css/custom-swiper.css"
 import "../css/custom-dropdown.css"
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import { motion } from "framer-motion";
+
 
 export default function SportsPage() {
-    const score_title = ['football', 'badminton', 'soccer']
+    const score_title = ['football', 'badminton', 'soccer', 'volleyball']
     const news_title = [{id: 1, title: 'new1', content: 'On July 7th, please report to Godbout hall to cheer for our U14 football team, who are goingagainst BPS!'}, 
                         {id: 2, title: 'new2', content: 'On July 7th, please report to Godbout hall to cheer for our U14 football team, who are goingagainst BPS!'}, 
                         {id: 3, title: 'new3', content: 'On July 7th, please report to Godbout hall to cheer for our U14 football team, who are goingagainst BPS!'}
@@ -94,15 +96,19 @@ export default function SportsPage() {
                     </div>
                 </nav>
             </header>
-            <main>
+            <main className="overflow-hidden">
                 {/* banner */}
                 <section className="background-picture-sp d-flex flex-column justify-content-center">
-                    <div className="container ">
+                    
+                    <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <h1 className="fs-80">Sports</h1>
+                                <h1 className="fs-80">Hs Sports</h1>
                             </div>
                         </div>
+                    </div>
+                    <div class="banner-video">
+                        <video class="w-100" src="/video/SchoolVid.mp4" autoPlay muted loop></video>
                     </div>
                 </section>
                 {/* curve dark blue*/}
@@ -157,7 +163,7 @@ export default function SportsPage() {
                 <section className="bg-dark-blue">
                     <div className="container">
                         <div className="row">
-                            <div className="col-6">
+                            <motion.div className="col-6" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                 <h1 className="fs-1 text-white text-center">
                                     scoreboard
                                 </h1>
@@ -165,7 +171,7 @@ export default function SportsPage() {
                                     <div className="card-body card-lightbluecolor p-5">
                                         {score_title.map((data) => {
                                             return (
-                                                <div key={data}>
+                                                <motion.div key={data} initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                                     <div className="row mb-2">
                                                         <div className="col-12">
                                                             <h2 className="text-center text-white">
@@ -206,53 +212,58 @@ export default function SportsPage() {
                                                             </p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </motion.div>
                                             )
                                         })}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                             <div className="col-6">
-                                <div className="dropdown text-center dda-margintop">
-                                    <a
-                                        className="btn dropdown-toggle"
-                                        href="#"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        
-                                        <span className="fs-1 text-white text-center">SEASON 1-3</span>
-                                        <Image 
-                                            height={500}
-                                            width={500}
-                                            src="/images/ddarrow.png"
-                                            alt=""
-                                            style={{height: 'auto', width: '26px'}}
-                                            className="dda"
-                                        />
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                SEASON 1
+                                <div className="row">
+                                    <motion.div className="offset-3 col-6" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
+                                        <div className="dropdown text-center dda-margintop mb-3">
+                                            <a
+                                                className="btn dropdown-toggle d-flex justify-content-center"
+                                                href="#"
+                                                role="button"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                            >
+                                                
+                                                    <span className="fs-1 text-white text-center">SEASON 1-3</span>
+                                                    <Image 
+                                                        height={500}
+                                                        width={500}
+                                                        src="/images/ddarrow.png"
+                                                        alt=""
+                                                        style={{height: 'auto', width: '26px'}}
+                                                        className="my-auto ms-2"
+                                                    />
                                             </a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                SEASON 2
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                SEASON 3
-                                            </a>
-                                        </li>
-                                    </ul>
+                                            <ul className="dropdown-menu w-100">
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                        SEASON 1
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                        SEASON 2
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                        SEASON 3
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </motion.div>
                                 </div>
                                 
+                                
                                 <div className="row">
-                                    <div className="col-6 mb-4">
+                                    <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
                                             <Image 
                                                 height={500}
@@ -265,8 +276,8 @@ export default function SportsPage() {
                                         <h2 className="text-center">
                                             Girls volleyball
                                         </h2>
-                                    </div>
-                                    <div className="col-6 mb-4">
+                                    </motion.div>
+                                    <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
                                             <Image 
                                                 height={500}
@@ -280,8 +291,8 @@ export default function SportsPage() {
                                         <h2 className="text-center">
                                             football
                                         </h2>
-                                    </div>
-                                    <div className="col-6 mb-4">
+                                    </motion.div>
+                                    <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
                                             <Image 
                                                 height={500}
@@ -295,8 +306,8 @@ export default function SportsPage() {
                                         <h2 className="text-center">
                                             basketball
                                         </h2>
-                                    </div>
-                                    <div className="col-6 mb-4">
+                                    </motion.div>
+                                    <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
                                             <Image 
                                                 height={500}
@@ -310,8 +321,8 @@ export default function SportsPage() {
                                         <h2 className="text-center">
                                             swimming
                                         </h2>
-                                    </div>
-                                    <div className="col-6 mb-4">
+                                    </motion.div>
+                                    <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
                                             <Image 
                                                 height={500}
@@ -325,8 +336,8 @@ export default function SportsPage() {
                                         <h2 className="text-center">
                                             Girls volleyball
                                         </h2>
-                                    </div>
-                                    <div className="col-6 mb-4">
+                                    </motion.div>
+                                    <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
                                             <Image 
                                                 height={500}
@@ -341,7 +352,7 @@ export default function SportsPage() {
                                                 Girls volleyball
                                             </h2>
                                         </Link>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>

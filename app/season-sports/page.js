@@ -1,12 +1,16 @@
+'use client';
+
 import "../css/main.css"
 import "../css/season-sports.css";
 import Image from "next/image";
 import Link from 'next/link';
 
+import { motion } from "framer-motion";
+
 export default function SeasonSports() {   
     
     return (
-        <main>
+        <main className="overflow-hidden">
             {/* banner */}
             <section className="background-picture-ss d-flex flex-column justify-content-center mb-5">
                 <Link href="/sports-page" className="back-icon">
@@ -68,14 +72,14 @@ export default function SeasonSports() {
             <section>
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 blue-text">
+                        <motion.div className="col-12 blue-text" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h2>recent games</h2>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row mb-5">
                         <div className="col-12">
-                            <div className="card p-2 bg-sblue">
-                                <div className="card-body pb-5">
+                            <motion.div className="card p-2 bg-sblue" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
+                                <motion.div className="card-body pb-5" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                     <div className="row">
                                         <div className="col-12 fs-3 text-white fw-bold">
                                             bps x ris u14 volleyball
@@ -86,8 +90,8 @@ export default function SeasonSports() {
                                             JULY 7th, 2024 | GODBOUT HALL
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
@@ -95,14 +99,14 @@ export default function SeasonSports() {
             <section>
                 <div className="container mb-5">
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div className="col-12" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h1 className="blue-text text-center fs-64">
                                 season 14
                             </h1>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="col-12 text-center">
+                        <motion.div className="col-12 text-center" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <Image
                                 height={500}
                                 width={500}
@@ -110,10 +114,10 @@ export default function SeasonSports() {
                                 alt=""
                                 className="s-image rounded-3 mb-4"
                             />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="offset-1 col-10">
+                        <motion.div className="offset-1 col-10" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <p className="text-black text-roboto">
                                 Season 14&apos;s team is comprised of Jessica,
                                 Jessica, Jessica, and Jessica. Sed ut
@@ -130,70 +134,61 @@ export default function SeasonSports() {
                                 inventore veritatis et quasi architecto beatae
                                 vitae dicta sunt explicabo.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
             <section className="bg-my-grey">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 text-center my-4">
+                        <motion.div className="col-12 text-center my-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h2>Awards</h2>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div className="col-12" initial={{ opacity: 0, y: "50px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h5>seasac 2014 gold medal</h5>
                             <p className="text-roboto grey-text text-margin">
                                 volleyball team won silver medal
                             </p>
                             <hr />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div className="col-12" initial={{ opacity: 0, y: "50px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h5>seasac 2014 gold medal</h5>
                             <p className="text-roboto grey-text text-margin">
                                 volleyball team won silver medal
                             </p>
                             <hr />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div className="col-12" initial={{ opacity: 0, y: "50px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h5>seasac 2014 gold medal</h5>
                             <p className="text-roboto grey-text text-margin">
                                 volleyball team won silver medal
                             </p>
                             <hr />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div className="col-12" initial={{ opacity: 0, y: "50px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h5>seasac 2014 gold medal</h5>
                             <p className="text-roboto grey-text text-margin">
                                 volleyball team won silver medal
                             </p>
                             <hr />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div className="col-12" initial={{ opacity: 0, y: "50px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <h5>seasac 2014 gold medal</h5>
                             <p className="text-roboto grey-text text-margin">
                                 volleyball team won silver medal
                             </p>
                             <hr />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <h5>seasac 2014 gold medal</h5>
-                            <p className="text-roboto grey-text text-margin">
-                                volleyball team won silver medal
-                            </p>
-                            <hr />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
