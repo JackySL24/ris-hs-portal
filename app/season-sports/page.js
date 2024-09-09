@@ -1,6 +1,6 @@
 'use client';
 
-import "../css/main.css"
+import "../css/main.css";
 import "../css/season-sports.css";
 import Image from "next/image";
 import Link from 'next/link';
@@ -19,12 +19,12 @@ export default function SeasonSports() {
                             width={500}
                             src="/images/return-arrow.png"
                             alt=""
-                            style={{height: '65px', width: 'auto'}}
+                            className="back-arrow"
                         />
 
                 </Link>
                 <div className="container">
-                    <div className="row">
+                    <div className="row mt-5 mt-md-0">
                         <div className="col-12 text-center">
                             <h1 className="fs-80">Girls varsity volleyball</h1>
                         </div>
@@ -35,7 +35,7 @@ export default function SeasonSports() {
             <section>
                 <div className="container mb-5">
                     <div className="row">
-                        <div className="col-2">
+                        <div className="offset-3 col-6 offset-md-0 col-md-2 mb-4">
                             <Image
                                 height={500}
                                 width={500}
@@ -44,7 +44,7 @@ export default function SeasonSports() {
                                 alt="..."
                             />
                         </div>
-                        <div className="col-10">
+                        <div className="col-12 col-md-10">
                             <h2 className="blue-text">coach jason derulo</h2>
                             <p className="text-black text-roboto">
                                 U14 Girls volleyball is a team that Sed ut
@@ -106,18 +106,18 @@ export default function SeasonSports() {
                         </motion.div>
                     </div>
                     <div className="row">
-                        <motion.div className="col-12 text-center" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
+                        <motion.div className="col-12 offset-lg-1 col-lg-10 text-center" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <Image
                                 height={500}
                                 width={500}
                                 src="/images/spiking.jpeg"
                                 alt=""
-                                className="s-image rounded-3 mb-4"
+                                className="s-image rounded-3 mb-4 w-100"
                             />
                         </motion.div>
                     </div>
                     <div className="row">
-                        <motion.div className="offset-1 col-10" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
+                        <motion.div className="col-12 offset-lg-1 col-lg-10" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                             <p className="text-black text-roboto">
                                 Season 14&apos;s team is comprised of Jessica,
                                 Jessica, Jessica, and Jessica. Sed ut

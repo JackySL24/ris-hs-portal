@@ -11,6 +11,14 @@ a {
     text-decoration: none;
 }
 
+.navbar-toggler-icon {
+    background-image: url('/images/more.png');
+} 
+
+.navbar-toggler:focus {
+    box-shadow: none
+}
+
 .fs-12 {
     font-size: 12px;
 }
@@ -108,9 +116,33 @@ a {
     color: #1d3758;
 }
 
+.btn-close:focus{
+    box-shadow: none;
+}
+
+.btn-blue {
+    background-color: #335176de;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #2b486bde;
+    color: #fff;
+}
+
+.live-link{
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+}
+
 .btn-orange {
     background-color:#f0a828;
     color: white;
+}
+.btn-orange:hover {
+    background-color: #dd9a26;
 }
 
 .post-fontcolor{
@@ -168,7 +200,30 @@ a {
 }
 
 .banner-video {
-    width: 100%;
+    width: 100vw;
     position: absolute;
     z-index: -1;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.banner-video > video{
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.back-arrow {
+    height: 45px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .back-arrow {
+        height: 65px;
+        width: 100%;
+    }
 }

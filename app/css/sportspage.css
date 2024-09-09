@@ -11,6 +11,16 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
-    object-position: left;
-    border-radius: 0.375rem;
+    object-position: center;
+    border-radius: 5px;
 } 
+.picture-card {
+    border-radius: 0.375rem;
+}
+.picture-hover {
+    transition: all .3s;
+}
+.picture-hover:hover {
+    transform: scale(1.05);
+
+}

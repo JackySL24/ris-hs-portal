@@ -41,7 +41,7 @@ export default function SportsPage() {
                             />
                         </a>
                         <button
-                            className="navbar-toggler"
+                            className="navbar-toggler border-0"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent"
@@ -56,27 +56,27 @@ export default function SportsPage() {
                             id="navbarSupportedContent"
                         >
                             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                                <li className="nav-item fs-3 mx-5">
+                                <li className="nav-item fs-3 mx-lg-5 mx-4 text-end">
                                     <a className="nav-link text-white" href="#">
                                         Club
                                     </a>
                                 </li>
-                                <li className="nav-item fs-3 mx-5">
+                                <li className="nav-item fs-3 mx-lg-5 mx-4 text-end">
                                     <a className="nav-link text-white" href="#">
                                         Sports
                                     </a>
                                 </li>
-                                <li className="nav-item fs-3 mx-5">
+                                <li className="nav-item fs-3 mx-lg-5 mx-4 text-end">
                                     <a className="nav-link text-white" href="#">
                                         Grade
                                     </a>
                                 </li>
-                                <li className="nav-item fs-3 mx-5">
+                                <li className="nav-item fs-3 mx-lg-5 mx-4 text-end">
                                     <a className="nav-link text-white" href="#">
                                         Points
                                     </a>
                                 </li>
-                                <li className="nav-item fs-3 mx-5">
+                                <li className="nav-item fs-3 mx-lg-5 mx-4 text-end">
                                     <a
                                         className="nav-link text-white"
                                         href="qa.html"
@@ -85,13 +85,13 @@ export default function SportsPage() {
                                     </a>
                                 </li>
                             </ul>
-                            <Image 
+                            {/*<Image 
                                 height={500}
                                 width={500}
                                 src="/images/icon.png"
                                 alt=""
                                 style={{height: '45px', width: 'auto'}}
-                            />
+                            />*/}
                         </div>
                     </div>
                 </nav>
@@ -108,7 +108,7 @@ export default function SportsPage() {
                         </div>
                     </div>
                     <div class="banner-video">
-                        <video class="w-100" src="/video/SchoolVid.mp4" autoPlay muted loop></video>
+                        <video class="" src="/video/SchoolVid.mp4" autoPlay muted loop></video>
                     </div>
                 </section>
                 {/* curve dark blue*/}
@@ -163,7 +163,7 @@ export default function SportsPage() {
                 <section className="bg-dark-blue">
                     <div className="container">
                         <div className="row">
-                            <motion.div className="col-6" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
+                            <motion.div className="col-12 col-lg-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                 <h1 className="fs-1 text-white text-center">
                                     scoreboard
                                 </h1>
@@ -198,7 +198,7 @@ export default function SportsPage() {
                                                                 2 : 1
                                                             </h1>
                                                         </div>
-                                                        <div className="col-5 bg-white h-50 my-auto shadow d-flex justify-content-center rounded-end">
+                                                        <div className="col-5 bg-white h-50 my-auto shadow d-flex justify-content-center rounded-end position-relative">
                                                             <Image 
                                                                 height={500}
                                                                 width={500}
@@ -210,6 +210,7 @@ export default function SportsPage() {
                                                             <p className="m-0 fs-3 blue-text">
                                                                 Phoenix
                                                             </p>
+                                                            <Link target="_blank" href={"https://www.youtube.com/embed/-4NCjjcF7y8?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fwww.rism.ac.th&widgetid=1"} className="live-link"> <i class="bi bi-circle-fill text-danger me-1"></i> Watch Live!</Link>
                                                         </div>
                                                     </div>
                                                 </motion.div>
@@ -218,7 +219,7 @@ export default function SportsPage() {
                                     </div>
                                 </div>
                             </motion.div>
-                            <div className="col-6">
+                            <div className="col-12 col-lg-6">
                                 <div className="row">
                                     <motion.div className="offset-3 col-6" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <div className="dropdown text-center dda-margintop mb-3">
@@ -265,90 +266,96 @@ export default function SportsPage() {
                                 <div className="row">
                                     <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
-                                            <Image 
-                                                height={500}
-                                                width={500}
-                                                src="/images/volleyball.webp"
-                                                alt=""
-                                                className="picture-width mb-2"
-                                            />
+                                            <div className="picture-card">
+                                                <Image 
+                                                    height={500}
+                                                    width={500}
+                                                    src="/images/volleyball.webp"
+                                                    alt=""
+                                                    className="picture-hover picture-width"
+                                                />
+                                            </div>
                                         </Link>
-                                        <h2 className="text-center">
+                                        <h2 className="text-center mt-2">
                                             Girls volleyball
                                         </h2>
                                     </motion.div>
                                     <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
-                                            <Image 
-                                                height={500}
-                                                width={500}
-                                                src="/images/volleyball.webp"
-                                                alt=""
-                                                className="picture-width mb-2"
-                                                 
-                                            />
+                                        <div className="picture-card">
+                                                <Image 
+                                                    height={500}
+                                                    width={500}
+                                                    src="/images/gfootball.png"
+                                                    alt=""
+                                                    className="picture-hover picture-width"
+                                                />
+                                            </div>
                                         </Link>
-                                        <h2 className="text-center">
+                                        <h2 className="text-center mt-2">
                                             football
                                         </h2>
                                     </motion.div>
                                     <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
-                                            <Image 
-                                                height={500}
-                                                width={500}
-                                                src="/images/gfootball.png"
-                                                alt=""
-                                                className="picture-width mb-2"
-                                                 
-                                            />
+                                        <div className="picture-card">
+                                                <Image 
+                                                    height={500}
+                                                    width={500}
+                                                    src="/images/basketball.jpeg"
+                                                    alt=""
+                                                    className="picture-hover picture-width"
+                                                />
+                                            </div>
                                         </Link>
-                                        <h2 className="text-center">
+                                        <h2 className="text-center mt-2">
                                             basketball
                                         </h2>
                                     </motion.div>
                                     <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
-                                            <Image 
-                                                height={500}
-                                                width={500}
-                                                src="/images/swimming.jpeg"
-                                                alt=""
-                                                className="picture-width mb-2"
-                                                 
-                                            />
+                                        <div className="picture-card">
+                                                <Image 
+                                                    height={500}
+                                                    width={500}
+                                                    src="/images/swimming.jpeg"
+                                                    alt=""
+                                                    className="picture-hover picture-width"
+                                                />
+                                            </div>
                                         </Link>
-                                        <h2 className="text-center">
+                                        <h2 className="text-center mt-2">
                                             swimming
                                         </h2>
                                     </motion.div>
                                     <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
-                                            <Image 
-                                                height={500}
-                                                width={500}
-                                                src="/images/gfootball.png"
-                                                alt=""
-                                                className="picture-width mb-2"
-                                                 
-                                            />
+                                        <div className="picture-card">
+                                                <Image 
+                                                    height={500}
+                                                    width={500}
+                                                    src="/images/volleyball.webp"
+                                                    alt=""
+                                                    className="picture-hover picture-width"
+                                                />
+                                            </div>
                                         </Link>
-                                        <h2 className="text-center">
+                                        <h2 className="text-center mt-2">
                                             Girls volleyball
                                         </h2>
                                     </motion.div>
                                     <motion.div className="col-6 mb-4" initial={{ opacity: 0, y: "100px"}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "Tween", stiffness: 100 }}>
                                         <Link href="/season-sports">
-                                            <Image 
-                                                height={500}
-                                                width={500}
-                                                src="/images/swimming.jpeg"
-                                                alt=""
-                                                className="picture-width mb-2"
-                                                 
-                                            />
-                                        
-                                            <h2 className="text-center">
+                                        <div className="picture-card">
+                                                <Image 
+                                                    height={500}
+                                                    width={500}
+                                                    src="/images/volleyball.webp"
+                                                    alt=""
+                                                    className="picture-hover picture-width"
+                                                />
+                                        </div>
+                                            <h2 className="text-center mt-2">
                                                 Girls volleyball
                                             </h2>
                                         </Link>
