@@ -12,7 +12,7 @@ export default function LoginPage() {
     const [password, setPassword] = useState('');
     const router = useRouter()
 
-    function login() {
+    async function login() {
         if(username.length == 0) {
             alert("Please Enter your username");
         }
@@ -20,6 +20,26 @@ export default function LoginPage() {
             alert("Please Enter your password");
         }
         else { // Enter both input
+            // CALL API
+            const json_body = JSON.stringify({
+                email : "yujuns27@rism.ac.th", 
+                password : "test123"
+            })
+            try {
+                const resp = await fetch('http://58.137.128.76/auth/login', {
+                    method: "POST",
+                    body: json_body
+                })
+                const json = await resp.json();
+                console.log(json);
+            }
+            catch(err) {
+                console.log(err);
+                
+            }
+            
+            
+            
             if (username == "me@gmail.com" && password == "helloworld") {
                 router.push('/back-office/dashboard')
             }
