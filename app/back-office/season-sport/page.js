@@ -14,6 +14,11 @@ export default function SeasonSport() {
         image: "",
     });
 
+    const [recentgame, setRecentGame] = useState({
+        rgtitle: "",
+        rgdescription: "",
+    });
+
     const [coach, setCoach] = useState({
         name: "",
         description: "",
@@ -64,6 +69,16 @@ export default function SeasonSport() {
             alert("Please provide a title");
         } else if (banner.picture.length == 0) {
             alert("Please provide a background picture");
+        } else {
+            // CALL API
+        }
+    }
+
+    function saveall_recentgame() {
+        if (recentgame.rgtitle.length == 0) {
+            alert("Please provide a title");
+        } else if (recentgame.rgdescription.length == 0) {
+            alert("Please provide a description");
         } else {
             // CALL API
         }
@@ -123,6 +138,13 @@ export default function SeasonSport() {
     function update_banner(event, key) {
         // key = title
         const temp = { ...banner };
+        temp[key] = event.target.value;
+        setBanner(temp);
+    }
+
+    function update_recentgame(event, key) {
+        // key = title
+        const temp = { ...recentgame };
         temp[key] = event.target.value;
         setBanner(temp);
     }
@@ -294,6 +316,68 @@ export default function SeasonSport() {
                                             <button
                                                 className="btn btn-blue"
                                                 onClick={saveall_coach}
+                                            >
+                                                SAVE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row mb-4">
+                        <div className="col-12">
+                            <div className="card">
+                                <h4 className="card-header bg-blue text-white">
+                                    Recent Game
+                                </h4>
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="col-12 mb-3">
+                                            <label
+                                                htmlFor=""
+                                                className="form-label"
+                                            >
+                                                Recent Game Title:{" "}
+                                            </label>
+                                            <input
+                                                value={recentgame.rgtitle}
+                                                onChange={(event) =>
+                                                    update_recentgame(
+                                                        event,
+                                                        "rgtitle"
+                                                    )
+                                                }
+                                                type="text"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col-12 mb-4">
+                                            <label
+                                                htmlFor=""
+                                                className="form-label"
+                                            >
+                                                Recent Game Description:{" "}
+                                            </label>
+                                            <textarea
+                                                value={recentgame.description}
+                                                onChange={(event) =>
+                                                    update_recentgame(
+                                                        event,
+                                                        "rgdescription"
+                                                    )
+                                                }
+                                                type=""
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row mb-2">
+                                        <div className="col-12 text-end">
+                                            <button
+                                                className="btn btn-blue"
+                                                onClick={saveall_recentgame}
                                             >
                                                 SAVE
                                             </button>
